@@ -1,0 +1,18 @@
+HTML
+------
+<div class="load-container">
+	<p>This text will get replaced by a loading indicator when a specific event happens.</p>
+</div>
+
+JS
+------
+// Start the loading widget
+$('.load-container').loading({
+    'loadingClass': 'loading', // CSS class that gets added to loading div
+    'loadingContent': '<p>Loading...</p>', // Content displayed in loading div
+});
+
+// Do whatever loading or changing here
+
+// Stop the loading widget
+$('.load-container').loading({'stop': true})
