@@ -33,7 +33,7 @@
                 var containerDims = getDimensions($this),
                 loadingDiv = $('<div class="' + settings.loadingClass + '">' + settings.loadingContent + '</div>'),
                 offset = $this.offset();
-                $this.after(loadingDiv);
+                $('body').append(loadingDiv);
                 var loaderDims = getDimensions(loadingDiv);
                 loadingDiv.css({
                 	'left': offset.left, 
@@ -44,7 +44,7 @@
                 	'text-align': 'center'
                 });
             } else {
-                $this.next('.' + settings.loadingClass).remove();
+                $('.' + settings.loadingClass).remove();
             }
         });
     }
